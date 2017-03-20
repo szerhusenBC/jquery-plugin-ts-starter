@@ -1,4 +1,4 @@
-import {MyPluginOptions} from "./plugin/options";
+import {MyPluginOptions} from "./plugin/my-plugin-options";
 import {MyPlugin} from "./plugin/my-plugin";
 
 (function ($: JQueryStatic) {

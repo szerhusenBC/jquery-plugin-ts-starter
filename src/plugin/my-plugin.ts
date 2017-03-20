@@ -1,4 +1,4 @@
-import {MyPluginOptions} from "./options";
+import {MyPluginOptions} from "./my-plugin-options";
 
 export class MyPlugin {
 

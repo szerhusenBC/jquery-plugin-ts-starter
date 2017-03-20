@@ -1,7 +1,7 @@
 {
   "name": "jquery-plugin-ts-starter",
-  "version": "0.0.1",
-  "description": "A simple starter project for developing jQuery plugins with Typescript under NodeJS",
+  "version": "0.1.0",
+  "description": "A simple starter project for developing jQuery plugins with Typescript and Webpack.",
   "main": "index.js",
   "scripts": {
     "clean:all": "npm cache clean && npm run clean:dist && rimraf node_modules",
@@ -14,7 +14,8 @@
     "jquery",
     "plugin",
     "starter",
-    "typescript"
+    "typescript",
+    "webpack"
   ],
   "author": "Stephan Zerhusen",
   "license": "MIT",
