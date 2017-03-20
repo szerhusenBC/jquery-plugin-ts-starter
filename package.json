@@ -19,6 +19,10 @@
   ],
   "author": "Stephan Zerhusen",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szerhusenBC/jquery-plugin-ts-starter.git"
+  },
   "dependencies": {},
   "devDependencies": {
     "typescript": "~2.0.0",
