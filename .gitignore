@@ -60,3 +60,6 @@ typings/
 # Intellij Idea
 .idea/
 *.iml
+
+# Misc
+dist/

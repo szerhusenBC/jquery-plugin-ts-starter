@@ -4,20 +4,34 @@
   "description": "A simple starter project for developing jQuery plugins with Typescript under NodeJS",
   "main": "index.js",
   "scripts": {
+    "clean:all": "npm cache clean && npm run clean:dist && rimraf node_modules",
+    "clean:dist": "rimraf dist",
+    "dist": "npm run clean:dist && webpack --progress --profile --colors --display-error-details --display-cached",
+    "start": "webpack-dev-server --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "jquery"
+    "jquery",
+    "plugin",
+    "starter",
+    "typescript"
   ],
   "author": "Stephan Zerhusen",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "typescript": "~2.0.0",
+    "webpack": "~2.2.1",
+    "webpack-dev-server": "^2.4.2",
+    "jquery": "3.2.0",
     "@types/jquery": "~2.0.41",
     "ts-node": "~2.0.0",
     "@types/node": "~6.0.60",
     "tslint": "~4.4.2",
-    "codelyzer": "~2.0.0-beta.4"
+    "ts-loader": "~2.0.2",
+    "source-map-loader": "~0.2.0",
+    "copy-webpack-plugin": "~4.0.1",
+    "html-webpack-plugin": "^2.28.0",
+    "rimraf": "~2.6.1"
   }
 }

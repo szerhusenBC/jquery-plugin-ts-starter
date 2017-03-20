@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <title>jQuery plugin starter with Typescript</title>
+   <title><%= htmlWebpackPlugin.options.metadata.title %></title>
+
+   <meta charset="UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="<%= htmlWebpackPlugin.options.metadata.description %>">
+
 </head>
 
 <body>
 <h1>jQuery plugin starter with Typescript</h1>
+
+<div id="test">Plugin container</div>
+
+<script src="lib/jquery.js"></script>
+<script>
+    $(function () {
+        $("#test").myPlugin();
+    });
+</script>
 </body>
 
 </html>
