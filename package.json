@@ -1,0 +1,23 @@
+{
+  "name": "jquery-plugin-ts-starter",
+  "version": "0.0.1",
+  "description": "A simple starter project for developing jQuery plugins with Typescript under NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jquery"
+  ],
+  "author": "Stephan Zerhusen",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "~2.0.0",
+    "@types/jquery": "~2.0.41",
+    "ts-node": "~2.0.0",
+    "@types/node": "~6.0.60",
+    "tslint": "~4.4.2",
+    "codelyzer": "~2.0.0-beta.4"
+  }
+}
