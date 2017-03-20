@@ -27,14 +27,14 @@ npm run dist
 
 You will find the distribution under **/dist**.
 
-##Creator
+## Creator
 
 **Stephan Zerhusen**
 
 * <https://twitter.com/stzerhus>
 * <https://github.com/szerhusenBC>
 
-##Copyright and license
+## Copyright and license
 
 The code is released under the [MIT license](LICENSE?raw=true).
 
