@@ -2,7 +2,7 @@ import {MyPluginOptions} from "./options";
 
 export class MyPlugin {
 
-   public static NAME: string = 'myPlugin';
+   public static NAME: string = "myPlugin";
 
    private rootElement: JQuery;
    private options: MyPluginOptions;

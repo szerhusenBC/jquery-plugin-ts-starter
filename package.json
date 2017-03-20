@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean:all": "npm cache clean && npm run clean:dist && rimraf node_modules",
-    "clean:dist": "rimraf dist",
+    "clean:dist": "rimraf dist && rimraf lint-reports",
     "dist": "npm run clean:dist && webpack --progress --profile --colors --display-error-details --display-cached",
     "start": "webpack-dev-server --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,6 +29,7 @@
     "@types/node": "~6.0.60",
     "tslint": "~4.4.2",
     "ts-loader": "~2.0.2",
+    "tslint-loader": "~3.4.3",
     "source-map-loader": "~0.2.0",
     "copy-webpack-plugin": "~4.0.1",
     "html-webpack-plugin": "^2.28.0",
