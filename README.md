@@ -27,6 +27,27 @@ npm run dist
 
 You will find the distribution under **/dist**.
 
+### Testing
+You can run the tests with
+
+```bash
+npm test
+```
+
+If you want to develop against the tests with hot reloading, you have to execute
+
+```bash
+npm run test:watch
+```
+
+The following technologies are used for writing and running tests:
+
+* Test runner: [KarmaJS](https://karma-runner.github.io)
+* Headless WebKit browser: [PhantomJS](http://phantomjs.org)
+* Testing framework: [MochaJS](https://mochajs.org)
+* BDD / TDD assertion library: [ChaiJS](http://chaijs.com)
+* Library for spies, stubs and mocks: [SinonJS](http://sinonjs.org)
+
 ## Creator
 
 **Stephan Zerhusen**
