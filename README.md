@@ -22,7 +22,11 @@ Then will then have a server running at **[http://localhost:3000](http://localho
 If you want to build a distribution, you have to execute
 
 ```bash
-npm run dist
+npm run build:dev
+```
+or
+```bash
+npm run build:prod
 ```
 
 You will find the distribution under **/dist**.
