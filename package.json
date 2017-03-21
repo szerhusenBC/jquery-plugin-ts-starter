@@ -6,7 +6,8 @@
   "scripts": {
     "clean:all": "npm cache clean && npm run clean:dist && rimraf node_modules",
     "clean:dist": "rimraf dist && rimraf lint-reports",
-    "dist": "npm run clean:dist && webpack --progress --profile --colors --display-error-details --display-cached",
+    "build:dev": "npm run clean:dist && webpack --progress --profile --colors --display-error-details --display-cached",
+    "build:prod": "npm run clean:dist && webpack -p --progress --profile --colors --display-error-details --display-cached",
     "start": "webpack-dev-server --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
