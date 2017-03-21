@@ -25,7 +25,7 @@ If you want to build a distribution, you have to execute
 npm run dist
 ```
 
-You will find the distribution under **/dist**.
+You will find the distribution under **/dist**. **jQuery is NOT bundled in the plugin file!**
 
 ### Testing
 You can run the tests with
