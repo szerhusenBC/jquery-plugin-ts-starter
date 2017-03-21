@@ -26,6 +26,7 @@ npm run dist
 ```
 
 You will find the distribution under **/dist**.
+
 **jQuery is NOT bundled in the plugin file!**
 
 ### Testing
