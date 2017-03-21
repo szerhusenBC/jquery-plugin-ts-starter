@@ -10,6 +10,6 @@ describe("MyPlugin", () => {
    });
 
    it("should initialize correctly", () => {
-      chai.assert.strictEqual(rootElement.text(), "myPlugin has been activated");
+      expect(rootElement.text()).toBe("myPlugin has been activated");
    });
 });

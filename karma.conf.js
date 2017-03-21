@@ -1,6 +1,7 @@
 // Karma configuration
 // based on https://medium.com/@fay_jai/getting-started-on-testing-with-typescript-reactjs-and-webpack-a45a72f4f603#.1bxgmsozo
-var webpackConfig = require("./webpack.config");
+// and https://github.com/AngularClass/angular2-webpack-starter/blob/master/config/karma.conf.js
+var webpackConfig = require('./webpack.config');
 
 module.exports = function (config) {
     config.set({
@@ -10,12 +11,12 @@ module.exports = function (config) {
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ["mocha", "chai", "sinon"],
+        frameworks: ['jasmine-jquery', 'jasmine'],
 
         // list of files / patterns to load in the browser
         files: [
-            "src/**/*.spec.ts",
-            "src/**/*.spec.tsx"
+            'src/**/*.spec.ts',
+            'src/**/*.spec.tsx'
         ],
 
         // list of files to exclude
@@ -24,8 +25,8 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            "src/**/*.spec.ts": ['webpack'], // Using karma-webpack npm module
-            "src/**/*.spec.tsx": ['webpack'] // Using karma-webpack npm module
+            'src/**/*.spec.ts': ['webpack', 'sourcemap'], // Using karma-webpack npm module
+            'src/**/*.spec.tsx': ['webpack', 'sourcemap'] // Using karma-webpack npm module
         },
 
         // test results reporter to use
@@ -48,9 +49,9 @@ module.exports = function (config) {
          * starting with karma-*. You can also explicitly list plugins you want
          * to load via the plugins configuration setting.
          */
-        plugins: [
-            "karma-*"
-        ],
+        // plugins: [
+        //     'karma-*'
+        // ],
 
         // enable / disable watching file and executing tests whenever any file changes
         // handled by CLI
@@ -77,9 +78,18 @@ module.exports = function (config) {
          * If you have a different webpack.config.js file that's used for testing
          * purposes, you can specify that here.
          */
-        webpack: {
-            module: webpackConfig.module,
-            resolve: webpackConfig.resolve
+        webpack: webpackConfig,
+
+        // Webpack please don't spam the console when running in karma!
+        webpackMiddleware: {
+            // webpack-dev-middleware configuration
+            // i.e.
+            noInfo: true,
+            // and use stats to turn off verbose output
+            stats: {
+                // options i.e.
+                chunks: false
+            }
         }
     })
 };
