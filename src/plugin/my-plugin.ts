@@ -1,4 +1,5 @@
 import {MyPluginOptions} from "./my-plugin-options";
+import {isNullOrUndefined} from "./utils";
 
 export class MyPlugin {
 
@@ -8,6 +9,10 @@ export class MyPlugin {
    private options: MyPluginOptions;
 
    constructor(rootElement: JQuery, options: MyPluginOptions) {
+      if (isNullOrUndefined(options)) {
+         throw new Error("options may not be empty!");
+      }
+
       this.rootElement = rootElement;
       this.options = options;
 
@@ -15,6 +20,6 @@ export class MyPlugin {
    }
 
    private init() {
-      this.rootElement.text("myPlugin has been activated");
+      this.rootElement.text(this.options.label);
    }
 }

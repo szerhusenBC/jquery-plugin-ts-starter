@@ -7,7 +7,7 @@
     "clean:all": "npm cache clean && npm run clean:dist && rimraf node_modules",
     "clean:dist": "rimraf dist && rimraf lint-reports",
     "build:dev": "npm run clean:dist && webpack --progress --profile --colors --display-error-details --display-cached",
-    "build:prod": "npm run clean:dist && webpack -p --progress --profile --colors --display-error-details --display-cached",
+    "build:prod": "npm run clean:dist && npm run test && webpack -p --progress --profile --colors --display-error-details --display-cached",
     "start": "webpack-dev-server --progress --profile --colors",
     "test": "karma start --no-auto-watch --single-run",
     "test:watch": "karma start --auto-watch --no-single-run"
@@ -27,7 +27,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "typescript": "~2.0.0",
+    "typescript": "~2.2.1",
     "webpack": "~2.2.1",
     "webpack-dev-server": "^2.4.2",
     "jquery": "3.2.0",
