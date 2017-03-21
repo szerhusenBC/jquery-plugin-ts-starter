@@ -6,9 +6,9 @@
   "scripts": {
     "clean:all": "npm cache clean && npm run clean:dist && rimraf node_modules",
     "clean:dist": "rimraf dist && rimraf lint-reports",
-    "build:dev": "npm run clean:dist && webpack --progress --profile --colors --display-error-details --display-cached",
-    "build:prod": "npm run clean:dist && npm run test && webpack -p --progress --profile --colors --display-error-details --display-cached",
-    "start": "webpack-dev-server --progress --profile --colors",
+    "build:dev": "npm run clean:dist && webpack --env=dev --progress --profile --colors --display-error-details --display-cached",
+    "build:prod": "npm run clean:dist && npm run test && webpack --env=prod --progress --profile --colors --display-error-details --display-cached",
+    "start": "webpack-dev-server --env=dev --progress --profile --colors",
     "test": "karma start --no-auto-watch --single-run",
     "test:watch": "karma start --auto-watch --no-single-run"
   },
@@ -30,6 +30,7 @@
     "typescript": "~2.2.1",
     "webpack": "~2.2.1",
     "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^4.1.0",
     "jquery": "3.2.0",
     "@types/jquery": "~2.0.41",
     "ts-node": "~2.0.0",
