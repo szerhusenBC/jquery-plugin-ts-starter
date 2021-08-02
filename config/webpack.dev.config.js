@@ -1,9 +1,9 @@
-const webpackMerge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.config.js');
 const METADATA = require('./metadata.js');
 
-module.exports = function (env) {
-    return webpackMerge(baseConfig(), {
+module.exports = function () {
+    return merge(baseConfig(), {
         devtool: 'inline-source-map',
 
         // Webpack Development Server config

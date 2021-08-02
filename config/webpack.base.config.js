@@ -63,9 +63,11 @@ module.exports = function (env) {
 
         plugins: [
             // static assets
-            new CopyWebpackPlugin([
-                {from: './node_modules/jquery/dist/jquery.js', to: './lib/jquery.js'}
-            ]),
+            new CopyWebpackPlugin({
+                patterns: [
+                    { from: "./node_modules/jquery/dist/jquery.js", to: "./lib/jquery.js" }
+                ],
+            }),
 
             // insert bundled script and metadata into index.html
             new HtmlWebpackPlugin({

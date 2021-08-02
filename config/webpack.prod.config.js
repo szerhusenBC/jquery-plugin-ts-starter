@@ -1,9 +1,9 @@
 const webpack = require("webpack");
-const webpackMerge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base.config.js');
 
-module.exports = function (env) {
-    return webpackMerge(baseConfig(), {
+module.exports = function () {
+    return merge(baseConfig(), {
         plugins: [
             new webpack.LoaderOptionsPlugin({
                 minimize: true,
